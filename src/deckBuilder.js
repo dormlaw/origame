@@ -1,6 +1,7 @@
 // TODO: добавить split(quantity) метод, который будет создавать количество piles и discards в зависимости от quantity
+// ? добавить чек на пустой pile
 class DeckBuilder {
-  // deck, goals, ...args
+  //// deck, goals, ...args
   constructor() {
     this.goals = {
       allGoals: {
@@ -23,8 +24,8 @@ class DeckBuilder {
         [],
       ],
     };
-    // createDeck(deck, ...args);
-    // createGoals(goals, ...args);
+    //// createDeck(deck, ...args);
+    //// createGoals(goals, ...args);
   }
 
   // TODO: переделать в static и отказаться от this.deck.mainDeck
@@ -92,6 +93,7 @@ class DeckBuilder {
     return { pileTopCards, discardTopCards };
   };
 
+  //TODO: добавить объединение discards и piles перед перетасовкой на случай, если pile не пустой
   shuffleDiscardIntoPiles() {
     for (let i = 0; i < 3; i++) {
       for (let j = this.deck.discard[i].length - 1; j > 0; j--) {
