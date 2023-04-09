@@ -1,0 +1,9 @@
+{
+  "name": "origame",
+  "module": "bin/origame.js",
+  "bin": "bin/origame.js",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.4.0"
+  }
+}
